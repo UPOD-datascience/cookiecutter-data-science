@@ -1,50 +1,55 @@
-# Cookiecutter Data Science
+<img src="./multimedia/umc_utrecht.png" width=200 align="right">
+# Cookiecutter Data Science at UPOD
 
-_A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
-
-
-#### [Project homepage](http://drivendata.github.io/cookiecutter-data-science/)
+This is a Cookiecutter template for Data Science projects at UPOD. It is based on the [template by DataDriven](https://github.com/drivendata/cookiecutter-data-science/tree/master) (you can see the [original project's homepage here](http://drivendata.github.io/cookiecutter-data-science/)).
 
 
-### Requirements to use the cookiecutter template:
------------
- - Python 2.7 or 3.5+
- - [Cookiecutter Python package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0: This can be installed with pip by or conda depending on how you manage your Python packages:
+## How to use this Cookiecutter template:
+
+1. Create a new environment (for example, using [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)). Make sure that it uses Python >= 3.8 (preferably Python 3.11).
+1. Install [Cookiecutter package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0.
+
+   Using `conda`:
+
+   ``` bash
+   conda install -c conda-forge cookiecutter
+   ```
+
+   or
+
+   Using `pip`:
+   ``` bash
+   pip install cookiecutter
+   ```
+1. Go to the directory where your project will be created and open a command prompt there.
+1. Then, type
+
+   ``` bash
+   cookiecutter https://github.com/UPOD-datascience/cookiecutter-ds	
+   ```
+1. Fill in the required questions (pretty straightforward).
+1. Start tracking your project with Git (optional, but much recommended)
+1. DONE!
+
+#### Bonus!
+To easily link all your Python scripts in `./src/` with your notebooks (i.e., make them findable), open a command prompt *in your project's root* and type
 
 ``` bash
-$ pip install cookiecutter
+pip3 install --editable .
 ```
+This way, all your scripts in the `./src` folder will be easily importable as `from src.funct import function`. 
+  
+## Documentation
+`TODO`
 
-or
+> In the future, we want to support documentation using [`MkDocs`](https://www.mkdocs.org/). The main advantage is that it is easy to set up, it supports [Markdown formatting](https://www.markdownguide.org/), and it looks great.
 
-``` bash
-$ conda config --add channels conda-forge
-$ conda install cookiecutter
-```
-
-
-### To start a new project, run:
-------------
-
-    cookiecutter -c v1 https://github.com/drivendata/cookiecutter-data-science
+To further customize the documentation, take a look at the [`Material for MkDocs documentation`](https://squidfunk.github.io/mkdocs-material/setup/) (sorry for the redundancy).
 
 
-[![asciicast](https://asciinema.org/a/244658.svg)](https://asciinema.org/a/244658)
+## Resulting directory structure
 
-### New version of Cookiecutter Data Science
-------------
-Cookiecutter data science is moving to v2 soon, which will entail using
-the command `ccds ...` rather than `cookiecutter ...`. The cookiecutter command
-will continue to work, and this version of the template will still be available.
-To use the legacy template, you will need to explicitly use `-c v1` to select it.
-Please update any scripts/automation you have to append the `-c v1` option (as above),
-which is available now.
-
-
-### The resulting directory structure
-------------
-
-The directory structure of your new project looks like this: 
+The directory structure of your new project will look like this:
 
 ```
 ├── LICENSE
@@ -54,23 +59,34 @@ The directory structure of your new project looks like this:
 │   ├── external       <- Data from third party sources.
 │   ├── interim        <- Intermediate data that has been transformed.
 │   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+│   └── raw            <- The original, immutable data dump. 
+│                         This is a good place for including data dictionaries.
+│
+├── dissemination      <- To be shared with outer audiences.
+│   ├── documents      <- Articles, written reports, etc.
+│   │   └── paper      <- LaTeX template for a paper
+│   ├── figures        <- Generated graphics and figures to be used in reporting
+│   ├── posters        <- Typically for conferences
+│   └── presentations  <- Usually PowerPoints (and their corresponding PDF)
 │
 ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+│                         TODO: switch to MkDocs
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
+├── notebooks          <- Jupyter notebooks. Naming convention is a two-digit number (for ordering),
+│                         the creator's initials, and a short description, all in camel case, for instance:
+│                         `01_amt_data_exploration`.
 │
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+├── references         <- Manuals, PDFs, and all other explanatory materials.
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
 │   └── figures        <- Generated graphics and figures to be used in reporting
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
+│
+├── results            <- Intermediate and/or final results (figures, variables, etc.).
 │
 ├── setup.py           <- makes project pip installable (pip install -e .) so src can be imported
 ├── src                <- Source code for use in this project.
@@ -81,6 +97,9 @@ The directory structure of your new project looks like this:
 │   │
 │   ├── features       <- Scripts to turn raw data into features for modeling
 │   │   └── build_features.py
+│   │
+│   ├── helpers        <- Auxiliary scripts
+│   │   └── helpers.py
 │   │
 │   ├── models         <- Scripts to train models and then use trained models to make
 │   │   │                 predictions
@@ -93,16 +112,16 @@ The directory structure of your new project looks like this:
 └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 ```
 
-## Contributing
-
-We welcome contributions! [See the docs for guidelines](https://drivendata.github.io/cookiecutter-data-science/#contributing).
-
-### Installing development requirements
-------------
+## Installing development requirements
 
     pip install -r requirements.txt
 
-### Running the tests
-------------
+
+## Running the tests
 
     py.test tests
+
+
+## Resources
+* [Cookiecutter](https://github.com/cookiecutter/cookiecutter)
+* [Original template by DataDriven](https://github.com/drivendata/cookiecutter-data-science/tree/master)
