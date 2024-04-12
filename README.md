@@ -1,4 +1,5 @@
 <img src="./multimedia/umc_utrecht.png" width=200 align="right">
+
 # Cookiecutter Data Science at UPOD
 
 This is a Cookiecutter template for Data Science projects at UPOD. It is based on the [template by DataDriven](https://github.com/drivendata/cookiecutter-data-science/tree/master) (you can see the [original project's homepage here](http://drivendata.github.io/cookiecutter-data-science/)).
@@ -75,8 +76,8 @@ The directory structure of your new project will look like this:
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a two-digit number (for ordering),
-│                         the creator's initials, and a short description, all in camel case, for instance:
-│                         `01_amt_data_exploration`.
+│                         the creator's initials, and a short description, all in camel case, 
+│                         for instance 01_amt_exploratory_data_analysis
 │
 ├── references         <- Manuals, PDFs, and all other explanatory materials.
 │
