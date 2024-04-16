@@ -7,7 +7,7 @@ This is a Cookiecutter template for Data Science projects at UPOD. It is based o
 
 ## How to use this Cookiecutter template:
 
-1. Create a new environment (for example, using [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)). Make sure that it uses Python >= 3.8 (preferably Python 3.11).
+1. Create a new environment (for example, using [`conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-with-commands)). Make sure that it uses Python >= 3.8 (preferably Python 3.11). *Note that Python 2 is not supported!*
 1. Install [Cookiecutter package](http://cookiecutter.readthedocs.org/en/latest/installation.html) >= 1.4.0.
 
    Using `conda`:
