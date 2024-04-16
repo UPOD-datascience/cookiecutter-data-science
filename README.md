@@ -71,9 +71,10 @@ The directory structure of your new project will look like this:
 │   └── presentations  <- Usually PowerPoints (and their corresponding PDF)
 │
 ├── docs               <- A default Sphinx project; see sphinx-doc.org for details
-│                         TODO: switch to MkDocs
 │
 ├── models             <- Trained and serialized models, model predictions, or model summaries
+│
+├── multimedia         <- Handy images, icons, GIFs, etc.
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a two-digit number (for ordering),
 │                         the creator's initials, and a short description, all in camel case, 
