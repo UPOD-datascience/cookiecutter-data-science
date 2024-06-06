@@ -33,12 +33,13 @@ This is a Cookiecutter template for Data Science projects at UPOD. It is based o
 1. DONE!
 
 #### Bonus!
-To easily link all your Python scripts in `./src/` with your notebooks (i.e., make them findable), open a command prompt *in your project's root* and type
+To easily link all your Python scripts in `./src/` with your notebooks (i.e., make them findable and [editable](https://stackoverflow.com/questions/35064426/when-would-the-e-editable-option-be-useful-with-pip-install)), 
+open a command prompt *in your project's root* and type
 
 ``` bash
 pip3 install --editable .
 ```
-This way, all your scripts in the `./src` folder will be easily importable as `from src.funct import function`. 
+This way, all your scripts in the `./src` folder will be easily importable as (for example) `import src.features.build_features as build_features`. 
   
 ## Documentation
 `TODO`
