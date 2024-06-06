@@ -58,7 +58,7 @@
 │   ├── helpers        <- Auxiliary scripts
 │   │   └── helpers.py
 │   │
-│   ├── models         <- Scripts to train models and then use trained models to make
+│   ├── modeling       <- Scripts to train models and then use trained models to make
 │   │   │                 predictions
 │   │   ├── predict_model.py
 │   │   └── train_model.py
