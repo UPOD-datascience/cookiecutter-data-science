@@ -87,3 +87,11 @@ target/
 
 # Mypy cache
 .mypy_cache/
+
+# Plotly (temporal) files
+*/temp-plot.html
+*/iframe_figures/
+
+# Cookiecutter folders
+models
+results
